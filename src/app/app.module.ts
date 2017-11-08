@@ -6,12 +6,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { ModalInfoComponent } from './modal-info/modal-info.component';
+import { NavigationComponent } from './navigation/navigation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    ModalInfoComponent
+    ModalInfoComponent,
+    NavigationComponent
   ],
   entryComponents: [
     ModalInfoComponent
