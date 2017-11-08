@@ -17,10 +17,9 @@ export class HeaderComponent implements OnInit {
   }
 
   openInfo() {
-    const modalRef = this.modalService.open(ModalInfoComponent, {
+    this.modalService.open(ModalInfoComponent, {
       backdrop: 'static'
     });
-    modalRef.componentInstance.name = 'World';
   }
 
 }

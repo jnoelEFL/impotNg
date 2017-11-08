@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { ModalInfoComponent } from './modal-info/modal-info.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { SituationComponent } from './situation/situation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     ModalInfoComponent,
-    NavigationComponent
+    NavigationComponent,
+    SituationComponent
   ],
   entryComponents: [
     ModalInfoComponent
