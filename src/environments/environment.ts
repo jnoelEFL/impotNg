@@ -7,5 +7,6 @@ import { dateVersion } from './version';
 export const environment = {
   env: 'dev',
   production: false,
-  dateVersion
+  dateVersion,
+  hmr: false
 };
