@@ -6,7 +6,7 @@
     "ng": "ng",
     "start": "node ./build/build-pre.js && ng serve",
     "hmr": "node ./build/build-pre.js && ng serve --hmr -e=hmr",
-    "build": "ng build",
+    "build": "node ./build/build-pre.js && ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -24,6 +24,7 @@
     "@angular/router": "^5.0.0",
     "@ng-bootstrap/ng-bootstrap": "^1.0.0-beta.5",
     "bootstrap": "^4.0.0-beta.2",
+    "bootswatch": "^4.0.0-beta.2",
     "core-js": "^2.4.1",
     "font-awesome": "^4.7.0",
     "rxjs": "^5.5.2",
