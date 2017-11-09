@@ -1,11 +1,11 @@
 <div class="card">
   <div class="card-body">
-    <h4 class="card-title p-2 text-white bg-primary">Situation</h4>
     <form>
+      <h4 class="card-title p-2 text-white bg-primary">Situation</h4>
       <div class="form-group row">
         <label for="nbPart" class="col-9 col-form-label">Nombre de parts</label>
         <div class="col-3">
-          <input type="text" readonly class="form-control-plaintext text-right" id="nbPart" value="0">
+          <input type="text" readonly class="form-control-plaintext text-right" id="nbPart" value="{{0 | number:'1.2'}}">
         </div>
       </div>
       <div class="form-group row">
@@ -17,19 +17,103 @@
       <div class="form-group row">
         <label for="revImpTP" class="col-9 col-form-label">Revenus imposables au taux proportionnel</label>
         <div class="col-3">
-          <input type="text" readonly class="form-control-plaintext text-right" id="revImpTP" value="0">
+          <input type="text" readonly class="form-control-plaintext text-right" id="revImpTP" value="{{0 | monetaire}}">
         </div>
       </div>
       <div class="form-group row">
         <label for="chargesDeduc" class="col-9 col-form-label">Charges déductibles</label>
         <div class="col-3">
-          <input type="text" readonly class="form-control-plaintext text-right" id="chargesDeduc" value="0">
+          <input type="text" readonly class="form-control-plaintext text-right" id="chargesDeduc" value="{{0 | monetaire}}">
         </div>
       </div>
       <div class="form-group row">
-          <label for="revNetTax" class="col-9 col-form-label text-right">Revenu net taxable</label>
+        <label for="revNetTax" class="col-9 col-form-label text-right">Revenu net taxable</label>
+        <div class="col-3">
+          <input type="text" readonly class="form-control-plaintext text-right" id="revNetTax" value="{{0 | monetaire}}">
+        </div>
+      </div>
+      <h4 class="card-title p-2 text-white bg-primary">Calculs de l'impôt</h4>
+      <div class="form-group row">
+        <label for="mntDroitSimple" class="col-9 col-form-label">Montant des droits simples</label>
+        <div class="col-3">
+          <input type="text" readonly class="form-control-plaintext text-right" id="mntDroitSimple" value="{{0 | monetaire}}">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="impTauxProp" class="col-9 col-form-label">Impôt au taux proportionnel</label>
+        <div class="col-3">
+          <input type="text" readonly class="form-control-plaintext text-right" id="impTauxProp" value="{{0 | monetaire}}">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="totImpBrut" class="col-9 col-form-label text-right">Total impôt brut</label>
+        <div class="col-3">
+          <input type="text" readonly class="form-control-plaintext text-right" id="totImpBrut" value="{{0 | monetaire}}">
+        </div>
+      </div>
+      <h4 class="card-title p-2 text-white bg-primary">Corrections à apporter à l'impôt brut</h4>
+      <div class="form-group row">
+        <label for="fixImpBrut" class="col-9 col-form-label">Corrections à apporter à l'impôt brut</label>
+        <div class="col-3">
+          <input type="text" readonly class="form-control-plaintext text-right" id="fixImpBrut" value="{{0 | monetaire}}">
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-9">
+          <div class="row">
+            <span class="col-3">Dont</span>
+            <label for="plafGen" class="col-9 col-form-label">plafonnement général</label>
+          </div>
+        </div>
+        <div class="col-3">
+          <input type="text" readonly class="form-control-plaintext text-right" id="plafGen" value="{{0 | monetaire}}">
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-9">
+          <div class="row">
+            <label for="credImpRed" class="col-9 offset-3 col-form-label">crédits d'impôt déduits</label>
+          </div>
+        </div>
+        <div class="col-3">
+          <input type="text" readonly class="form-control-plaintext text-right" id="credImpRed" value="{{0 | monetaire}}">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="totImpBrut" class="col-9 col-form-label text-right">Total impôt brut</label>
+        <div class="col-3">
+          <input type="text" readonly class="form-control-plaintext text-right" id="totImpBrut" value="{{0 | monetaire}}">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="contribExcHautRev" class="col-9 col-form-label">Contribution Exceptionnelle sur les Hauts Revenus</label>
+        <div class="col-3">
+          <input type="text" readonly class="form-control-plaintext text-right" id="contribExcHautRev" value="{{0 | monetaire}}">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="mntPrevSoc" class="col-9 col-form-label">Montant des prélèvements sociaux</label>
+        <div class="col-3">
+          <input type="text" readonly class="form-control-plaintext text-right" id="mntPrevSoc" value="{{0 | monetaire}}">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="impotNet" class="col-9 col-form-label text-right">Impôt net à payer</label>
+        <div class="col-3">
+          <input type="text" readonly class="form-control-plaintext text-right" id="impotNet" value="{{0 | monetaire}}">
+        </div>
+      </div>
+      <h4 class="card-title p-2 text-white bg-primary">&nbsp;</h4>
+      <div class="form-group row">
+        <label for="tmi" class="col-9 col-form-label">Taux marginal d'imposition</label>
+        <div class="col-3">
+          <input type="text" readonly class="form-control-plaintext text-right" id="tmi" value="{{0 | taux}}">
+        </div>
+      </div>
+      <div class="form-group row">
+          <label for="revFiscRef" class="col-9 col-form-label">Revenu fiscal de référence</label>
           <div class="col-3">
-            <input type="text" readonly class="form-control-plaintext text-right" id="revNetTax" value="0">
+            <input type="text" readonly class="form-control-plaintext text-right" id="revFiscRef" value="{{0 | monetaire}}">
           </div>
         </div>
     </form>
