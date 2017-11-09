@@ -8,6 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { ModalInfoComponent } from './modal-info/modal-info.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { SituationComponent } from './situation/situation.component';
+import { ResultatComponent } from './resultat/resultat.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { SituationComponent } from './situation/situation.component';
     HeaderComponent,
     ModalInfoComponent,
     NavigationComponent,
-    SituationComponent
+    SituationComponent,
+    ResultatComponent
   ],
   entryComponents: [
     ModalInfoComponent
