@@ -9,6 +9,7 @@ import { ModalInfoComponent } from './modal-info/modal-info.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { SituationComponent } from './situation/situation.component';
 import { ResultatComponent } from './resultat/resultat.component';
+import { MonetairePipe } from './pipes/monetaire.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ResultatComponent } from './resultat/resultat.component';
     ModalInfoComponent,
     NavigationComponent,
     SituationComponent,
-    ResultatComponent
+    ResultatComponent,
+    MonetairePipe
   ],
   entryComponents: [
     ModalInfoComponent
