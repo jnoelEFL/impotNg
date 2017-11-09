@@ -6,17 +6,155 @@
     <form>
       <h4 class="card-title p-2 text-white bg-primary">Foyer fiscal</h4>
       <div class="form-group row">
-        <label for="selectSitFam" class="col-sm-6 col-form-label">Situation de famille</label>
-        <div class="col-sm-6">
+        <label for="selectSitFam" class="col-6 col-form-label">Situation de famille</label>
+        <div class="col-6">
           <select class="form-control" id="selectSitFam">
             <option *ngFor="let sitFam of listSitFams" [value]="sitFam.value">{{sitFam.label}}</option>
           </select>
         </div>
       </div>
       <div class="form-group row">
-        <label for="canbp" class="col-sm-6 col-form-label">Nombre de parts</label>
-        <div class="col-sm-6">
+        <label for="canbp" class="col-6 col-form-label">Nombre de parts</label>
+        <div class="col-6">
           <input class="form-control taux" type="text" id="canbp" value="0.00" maxlength="4">
+        </div>
+      </div>
+      <h4 class="card-title p-2 text-white bg-primary">Détail des revenus</h4>
+      <div class="form-group row">
+        <div class="col-6 col-xs-12">
+          <div class="row">
+            <div class="col-1 col-xs-1">
+              <i class="fa fa-star pos_Puce"></i>
+            </div>
+            <div class="col-10 col-xs-10 px-0">
+              <label for="sppe" class="col-form-label py-0 pr-0">
+                Traitements, salaires, pensions
+              </label>
+              <small class="text-muted home_sous_titre mx-0">
+                montant net taxable
+              </small>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <input class="form-control" type="text" id="sppe" value="0">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-1 col-xs-1">
+          <i class="fa fa-star pos_Puce"></i>
+        </div>
+        <div class="col-10 col-xs-10 px-0">
+          <label for="sppe" class="col-form-label py-0 pr-0">
+            Revenus des professions non salariées
+          </label>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="ra_rvnnoncompro" class="col-5 offset-1 col-form-label">Montant net taxable de BNC</label>
+        <div class="col-4">
+          <input class="form-control taux" type="text" id="ra_rvnnoncompro" value="0.00" maxlength="4">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="ra_rvninduscompro" class="col-5 offset-1 col-form-label">Montant net taxable de BIC</label>
+        <div class="col-4">
+          <input class="form-control taux" type="text" id="ra_rvninduscompro" value="0.00" maxlength="4">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="ra_rvnagri" class="col-5 offset-1 col-form-label">Montant net taxable de BA</label>
+        <div class="col-4">
+          <input class="form-control taux" type="text" id="ra_rvnagri" value="0.00" maxlength="4">
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-6 col-xs-12">
+          <div class="row">
+            <div class="col-1 col-xs-1">
+              <i class="fa fa-star pos_Puce"></i>
+            </div>
+            <div class="col-10 col-xs-10 px-0">
+              <label for="ra_lmnp" class="col-form-label py-0 pr-0">
+                Loueur en meublé non professionnel
+              </label>
+              <small class="text-muted home_sous_titre mx-0">
+                montant net taxable
+              </small>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <input class="form-control" type="text" id="ra_lmnp" value="0">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-1 col-xs-1">
+          <i class="fa fa-star pos_Puce"></i>
+        </div>
+        <div class="col-10 col-xs-10 px-0">
+          <label for="sppe" class="col-form-label py-0 pr-0">
+            Revenus de capitaux mobiliers
+          </label>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-5 offset-1">
+          <label for="ra_rvncapmblie" class="col-form-label">Montant net taxable</label>
+          <p class="home_sous_titre text-muted">dont montant soumis aux prélèvements sociaux </p>
+        </div>
+        <div class="col-4">
+          <input class="form-control taux" type="text" id="ra_rvncapmblie" value="0.00" maxlength="4">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="revlign_dc_ch_ts_tr_dejasoumi_prelsoc_avecsgdeduc" class="col-5 offset-1 col-form-label">RCM dont les PS ont déjà été payés avec la CSG déductible</label>
+        <div class="col-4">
+          <input class="form-control taux" type="text" id="revlign_dc_ch_ts_tr_dejasoumi_prelsoc_avecsgdeduc" value="0.00" maxlength="4">
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-6 col-xs-12">
+          <div class="row">
+            <div class="col-1 col-xs-1">
+              <i class="fa fa-star pos_Puce"></i>
+            </div>
+            <div class="col-10 col-xs-10 px-0">
+              <label for="ra_rvnfonc" class="col-form-label py-0 pr-0">
+                  Revenus fonciers
+              </label>
+              <small class="text-muted home_sous_titre mx-0">
+                montant net taxable
+              </small>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <input class="form-control" type="text" id="ra_rvnfonc" value="0">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-1 col-xs-1">
+          <i class="fa fa-star pos_Puce"></i>
+        </div>
+        <div class="col-10 col-xs-10 px-0">
+          <label for="sppe" class="col-form-label py-0 pr-0">
+              Plus-values de cession de valeurs mobilières
+          </label>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-5 offset-1">
+          <label for="cartp" class="col-form-label">Montant net taxable</label>
+        </div>
+        <div class="col-4">
+          <input class="form-control taux" type="text" id="cartp" value="0.00" maxlength="4">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="pv_abb_exo" class="col-5 offset-1 col-form-label">Abattement pour durée de détention déduit</label>
+        <div class="col-4">
+          <input class="form-control taux" type="text" id="pv_abb_exo" value="0.00" maxlength="4">
         </div>
       </div>
     </form>
