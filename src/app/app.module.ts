@@ -10,6 +10,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { SituationComponent } from './situation/situation.component';
 import { ResultatComponent } from './resultat/resultat.component';
 import { MonetairePipe } from './pipes/monetaire.pipe';
+import { TauxPipe } from './pipes/taux.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { MonetairePipe } from './pipes/monetaire.pipe';
     NavigationComponent,
     SituationComponent,
     ResultatComponent,
-    MonetairePipe
+    MonetairePipe,
+    TauxPipe
   ],
   entryComponents: [
     ModalInfoComponent
